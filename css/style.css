@@ -1,0 +1,241 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    font-size: 12px;
+}
+
+:root {
+    --main-width: 40vw;
+}
+
+body {
+    background-color: hsl(30, 38%, 92%);
+    width: 100%;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 2;
+    width: var(--main-width);
+    height: 55vh;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.product {
+    grid-column: 1/ span 1;
+    grid-row: 1;
+    width: calc(var(--main-width)/2);
+    background-image: url(../images/image-product-desktop.jpg);
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+}
+
+.description {
+    grid-row: 1;
+    overflow: hidden;
+    width: calc(var(--main-width)/2);
+    background-color: white;
+    grid-column: 2 /span 1;
+    padding: 8%;
+}
+
+.header {
+    width: 100%;
+    height: 10%;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #b1b2b7;
+
+}
+
+.price {
+
+    font-family: 'Fraunces', serif;
+}
+
+h2 {
+    font-family: 'Fraunces', serif;
+    height: 31%;
+    overflow: hidden;
+    font-size: 125%;
+}
+
+.long-para {
+    color: #b1b2b7;
+}
+
+.price {
+    text-align: center;
+    height: 16%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 125%;
+    color: #3d8168;
+    position: relative;
+}
+
+.price::before {
+    position: absolute;
+    font-size: 11px;
+    content: "$169.99";
+    text-decoration: line-through;
+    width: 3%;
+    height: 7%;
+    top: 34%;
+    right: 37%;
+    color: #b1b2b7;
+}
+
+button {
+    height: 13%;
+    display: flex;
+    width: 100%;
+    border: 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #3d8168;
+    color: white;
+    cursor: pointer;
+}
+
+i {
+    margin-right: 5%;
+}
+
+
+@media (min-width: 375px) {
+    .description {
+        overflow: hidden;
+        width: var(--main-width);
+        background-color: white;
+        padding: 8%;
+        grid-column: 1/ span 1;
+        grid-row: 2/ span 1;
+        height: 100%;
+    }
+
+    .product {
+        width: var(--main-width);
+        background-image: url(../images/image-product-desktop.jpg);
+        background-size: cover;
+        height: 100%;
+        overflow: hidden;
+        grid-column: 1/ span 1;
+        grid-row: 1 / span 1;
+    }
+
+    :root {
+        --main-width: 95vw
+    }
+
+    .card {
+        display: grid;
+        grid-template-rows: 50% 2fr;
+        width: var(--main-width);
+        height: 73vh;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 576px) {
+    .description {
+        overflow: hidden;
+        width: var(--main-width);
+        background-color: white;
+        padding: 8%;
+        grid-column: 1/ span 1;
+        grid-row: 2/ span 1;
+        height: 100%;
+    }
+
+    .product {
+        width: var(--main-width);
+        background-image: url(../images/image-product-desktop.jpg);
+        background-size: cover;
+        height: 100%;
+        overflow: hidden;
+        grid-column: 1/ span 1;
+        grid-row: 1 / span 1;
+    }
+
+    :root {
+        --main-width: 95vw
+    }
+
+    .card {
+        display: grid;
+        grid-template-rows: 50% 2fr;
+        width: var(--main-width);
+        height: 73vh;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+}
+
+@media (min-width: 768px) {
+    :root {
+            --main-width: 55vw
+        }
+    .description {
+        overflow: hidden;
+        width: calc(var(--main-width)/2);
+        background-color: white;
+        padding: 8%;
+        grid-column: 2/ span 1;
+        grid-row: 1/ span 1;
+        height: 100%;
+    }
+
+    .product {
+        width: calc(var(--main-width)/2);
+        background-image: url(../images/image-product-desktop.jpg);
+        background-size: cover;
+        height: 100%;
+        overflow: hidden;
+        grid-column: 1/ span 1;
+        grid-row: 1 / span 1;
+    }
+
+    .card {
+        display: grid;
+        grid-template-rows: 100% 1fr;
+        grid-template-columns: 50% 2fr;
+        width: var(--main-width);
+            height: 48vh;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+}
+
+@media (min-width: 992px) {
+    
+}
+
+@media (min-width: 1200px) {
+    :root {
+            --main-width: 40vw;
+        }
+}
